@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Now UI React Native",
-    "slug": "now-ui-react-native",
+    "name": "Imarisha E-guarantorship app",
+    "slug": "Imarisha E-guarantorship app",
     "privacy": "public",
     "platforms": [
       "ios",
@@ -10,7 +10,7 @@
     ],
     "version": "1.4.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/now-logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",

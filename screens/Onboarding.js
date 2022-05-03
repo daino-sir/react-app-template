@@ -32,44 +32,14 @@ export default class Onboarding extends React.Component {
                     color="white"
                     size={44}
                   >
-                    Now UI
-                    React Native
+                    Presta Sign
                   </Text>
                 </Block>
               </Block>
               <Block middle row>
-                <Text
-                  color="white"
-                  size={16}
-                  style={{ fontFamily: 'montserrat-regular' }}
-                >
-                  Designed by
-                </Text>
-                <Image
-                  source={Images.InvisionLogo}
-                  style={{
-                    height: 28,
-                    width: 91,
-                    marginLeft: theme.SIZES.BASE
-                  }}
-                />
+
               </Block>
               <Block middle row style={{ marginTop: 15, marginBottom: 30}}>
-                <Text
-                  color="white"
-                  size={16}
-                  style={{ fontFamily: 'montserrat-regular' }}
-                >
-                  Coded by
-                </Text>
-                <Image
-                  source={Images.CreativeTimLogo}
-                  style={{
-                    height: 29,
-                    width: 129,
-                    marginLeft: theme.SIZES.BASE
-                  }}
-                />
               </Block>
 
               <Block
@@ -86,10 +56,10 @@ export default class Onboarding extends React.Component {
                   onPress={() => navigation.navigate('App')}
                 >
                   <Text
-                    style={{ fontFamily: 'montserrat-bold', fontSize: 14 }}
+                    style={{ fontFamily: 'montserrat-bold', fontSize: 14}}
                     color={theme.COLORS.WHITE}
                   >
-                    GET STARTED
+                    Get Started
                   </Text>
                 </Button>
               </Block>
@@ -116,7 +86,8 @@ const styles = StyleSheet.create({
     width: width - theme.SIZES.BASE * 4,
     height: theme.SIZES.BASE * 3,
     shadowRadius: 0,
-    shadowOpacity: 0
+    shadowOpacity: 0,
+    borderRadius: 50
   },
 
   gradient: {
