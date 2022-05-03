@@ -3,7 +3,7 @@ import { Linking, StyleSheet, TouchableOpacity } from 'react-native';
 
 import Icon from './Icon';
 import React from 'react';
-import nowTheme from '../constants/Theme';
+import appTheme from '../constants/Theme';
 
 class DrawerItem extends React.Component {
   renderIcon = () => {
@@ -16,7 +16,7 @@ class DrawerItem extends React.Component {
             name="app2x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -26,7 +26,7 @@ class DrawerItem extends React.Component {
             name="atom2x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -36,7 +36,7 @@ class DrawerItem extends React.Component {
             name="paper"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -46,7 +46,7 @@ class DrawerItem extends React.Component {
             name="profile-circle"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -56,7 +56,7 @@ class DrawerItem extends React.Component {
             name="badge2x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -66,7 +66,7 @@ class DrawerItem extends React.Component {
             name="settings-gear-642x"
             family="NowExtra"
             size={18}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             style={{ opacity: 0.5 }}
           />
         );
@@ -76,7 +76,7 @@ class DrawerItem extends React.Component {
             name="album"
             family="NowExtra"
             size={14}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
           />
         );
       case 'GETTING STARTED':
@@ -86,7 +86,7 @@ class DrawerItem extends React.Component {
             family="NowExtra"
             size={18}
             style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
           />
         );
       case 'LOGOUT':
@@ -96,7 +96,7 @@ class DrawerItem extends React.Component {
             family="NowExtra"
             size={18}
             style={{ borderColor: 'rgba(0,0,0,0.5)', opacity: 0.5 }}
-            color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+            color={focused ? appTheme.COLORS.PRIMARY : 'black'}
           />
         );
       default:
@@ -136,7 +136,7 @@ class DrawerItem extends React.Component {
               }}
               size={12}
               bold={focused ? true : false}
-              color={focused ? nowTheme.COLORS.PRIMARY : 'black'}
+              color={focused ? appTheme.COLORS.PRIMARY : 'black'}
             >
               {title}
             </Text>
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   activeStyle: {
-    backgroundColor: nowTheme.COLORS.WHITE,
+    backgroundColor: appTheme.COLORS.WHITE,
     borderRadius: 30,
     color: 'white',
   },

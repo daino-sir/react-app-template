@@ -6,7 +6,7 @@ import { Button, Block, NavBar, Text, theme, Button as GaButton } from 'galio-fr
 import Icon from './Icon';
 import Input from './Input';
 import Tabs from './Tabs';
-import nowTheme from '../constants/Theme';
+import appTheme from '../constants/Theme';
 
 const { height, width } = Dimensions.get('window');
 const iPhoneX = () =>
@@ -21,9 +21,9 @@ const BellButton = ({ isWhite, style, navigation }) => (
       family="NowExtra"
       size={16}
       name="bulb"
-      color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+      color={appTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
-    <Block middle style={[styles.notify, { backgroundColor: nowTheme.COLORS[isWhite ? 'WHITE' : 'PRIMARY'] }]} />
+    <Block middle style={[styles.notify, { backgroundColor: appTheme.COLORS[isWhite ? 'WHITE' : 'PRIMARY'] }]} />
   </TouchableOpacity>
 );
 
@@ -33,7 +33,7 @@ const BasketButton = ({ isWhite, style, navigation }) => (
       family="NowExtra"
       size={16}
       name="basket2x"
-      color={nowTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
+      color={appTheme.COLORS[isWhite ? 'WHITE' : 'ICON']}
     />
   </TouchableOpacity>
 );
@@ -47,7 +47,7 @@ class Header extends React.Component {
   };
   renderRight = () => {
     const { white, title, navigation } = this.props;
-    
+
 
     if (title === 'Title') {
       return [
@@ -138,7 +138,7 @@ class Header extends React.Component {
               family="NowExtra"
               size={18}
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.HEADER}
+              color={appTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionLeft || 'Beauty'}
@@ -152,7 +152,7 @@ class Header extends React.Component {
               name="bag-162x"
               family="NowExtra"
               style={{ paddingRight: 8 }}
-              color={nowTheme.COLORS.HEADER}
+              color={appTheme.COLORS.HEADER}
             />
             <Text style={{ fontFamily: 'montserrat-regular' }} size={16} style={styles.tabTitle}>
               {optionRight || 'Fashion'}
@@ -225,13 +225,13 @@ class Header extends React.Component {
               family="NowExtra"
               size={16}
               onPress={this.handleLeftPress}
-              color={iconColor || (white ? nowTheme.COLORS.WHITE : nowTheme.COLORS.ICON)}
+              color={iconColor || (white ? appTheme.COLORS.WHITE : appTheme.COLORS.ICON)}
             />
           }
           leftStyle={{ paddingVertical: 12, flex: 0.2 }}
           titleStyle={[
             styles.title,
-            { color: nowTheme.COLORS[white ? 'WHITE' : 'HEADER'] },
+            { color: appTheme.COLORS[white ? 'WHITE' : 'HEADER'] },
             titleColor && { color: titleColor }
           ]}
           {...props}
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
     elevation: 3
   },
   notify: {
-    backgroundColor: nowTheme.COLORS.SUCCESS,
+    backgroundColor: appTheme.COLORS.SUCCESS,
     borderRadius: 4,
     height: theme.SIZES.BASE / 2,
     width: theme.SIZES.BASE / 2,
@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     borderWidth: 1,
     borderRadius: 30,
-    borderColor: nowTheme.COLORS.BORDER
+    borderColor: appTheme.COLORS.BORDER
   },
   options: {
     marginBottom: 24,
@@ -307,7 +307,7 @@ const styles = StyleSheet.create({
   tabTitle: {
     lineHeight: 19,
     fontWeight: '400',
-    color: nowTheme.COLORS.HEADER
+    color: appTheme.COLORS.HEADER
   },
   social: {
     width: theme.SIZES.BASE * 3.5,

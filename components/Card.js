@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
 import { Block, Text, theme } from 'galio-framework';
 
-import { nowTheme } from '../constants';
+import { appTheme } from '../constants';
 
 class Card extends React.Component {
   render() {
@@ -43,7 +43,7 @@ class Card extends React.Component {
                 style={{ fontFamily: 'montserrat-regular' }}
                 size={14}
                 style={titleStyles}
-                color={nowTheme.COLORS.SECONDARY}
+                color={appTheme.COLORS.SECONDARY}
               >
                 {item.title}
               </Text>
@@ -52,7 +52,7 @@ class Card extends React.Component {
                   <Text
                     style={{ fontFamily: 'montserrat-regular' }}
                     size={32}
-                    color={nowTheme.COLORS.BLACK}
+                    color={appTheme.COLORS.BLACK}
                   >
                     {item.subtitle}
                   </Text>
@@ -78,7 +78,7 @@ class Card extends React.Component {
                   <Text
                     style={{ fontFamily: 'montserrat-regular' }}
                     size={12}
-                    color={nowTheme.COLORS.TEXT}
+                    color={appTheme.COLORS.TEXT}
                   >
                     {item.body}
                   </Text>
@@ -92,7 +92,7 @@ class Card extends React.Component {
                 style={styles.articleButton}
                 size={12}
                 muted={!ctaColor}
-                color={ctaColor || nowTheme.COLORS.ACTIVE}
+                color={ctaColor || appTheme.COLORS.ACTIVE}
                 bold
               >
                 {item.cta}

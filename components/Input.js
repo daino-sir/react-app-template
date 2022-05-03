@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Input } from "galio-framework";
 
 import Icon from './Icon';
-import { nowTheme } from "../constants";
+import { appTheme } from "../constants";
 
 class ArInput extends React.Component {
   render() {
@@ -23,13 +23,13 @@ class ArInput extends React.Component {
     return (
       <Input
         placeholder="write something here"
-        placeholderTextColor={nowTheme.COLORS.MUTED}
+        placeholderTextColor={appTheme.COLORS.MUTED}
         style={inputStyles}
-        color={nowTheme.COLORS.HEADER}
+        color={appTheme.COLORS.HEADER}
         iconContent={
           <Icon
             size={14}
-            color={nowTheme.COLORS.ICON}
+            color={appTheme.COLORS.ICON}
             name="link"
             family="AntDesign"
           />
@@ -57,21 +57,21 @@ ArInput.propTypes = {
 const styles = StyleSheet.create({
   input: {
     borderRadius: 30,
-    borderColor: nowTheme.COLORS.BORDER,
+    borderColor: appTheme.COLORS.BORDER,
     height: 44,
     backgroundColor: '#FFFFFF'
   },
   success: {
-    borderColor: nowTheme.COLORS.INPUT_SUCCESS
+    borderColor: appTheme.COLORS.INPUT_SUCCESS
   },
   error: {
-    borderColor: nowTheme.COLORS.INPUT_ERROR
+    borderColor: appTheme.COLORS.INPUT_ERROR
   },
   primary: {
-    borderColor: nowTheme.COLORS.PRIMARY
+    borderColor: appTheme.COLORS.PRIMARY
   },
   shadow: {
-    shadowColor: nowTheme.COLORS.BLACK,
+    shadowColor: appTheme.COLORS.BLACK,
     shadowOffset: { width: 0, height: 0.5 },
     shadowRadius: 1,
     shadowOpacity: 0.13,

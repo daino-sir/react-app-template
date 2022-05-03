@@ -1,7 +1,7 @@
-import nowTheme from './Theme';
+import appTheme from './Theme';
 import articles from './articles';
 import Images from './Images';
 import tabs from './tabs';
 import utils from './utils';
 
-export { articles, nowTheme, Images, tabs, utils };
+export { articles, appTheme, Images, tabs, utils };

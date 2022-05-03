@@ -4,7 +4,7 @@ import { DrawerItem as DrawerCustomItem, Icon } from '../components';
 
 import Images from '../constants/Images';
 import React from 'react';
-import nowTheme from '../constants/Theme';
+import appTheme from '../constants/Theme';
 import { useSafeArea } from 'react-native-safe-area-context';
 
 const { width } = Dimensions.get('screen');
@@ -42,7 +42,7 @@ function CustomDrawerContent({ drawerPosition, navigation, profile, focused, sta
               }}
             />
             <Text
-              color={nowTheme.COLORS.BLACK}
+              color={appTheme.COLORS.BLACK}
               style={{
                 marginTop: 30,
                 marginLeft: 20,

@@ -5,7 +5,7 @@ import ModalDropdown from 'react-native-modal-dropdown';
 import { Block, Text } from 'galio-framework';
 
 import Icon from './Icon';
-import { nowTheme } from '../constants';
+import { appTheme } from '../constants';
 
 class DropDown extends React.Component {
   state = {
@@ -52,7 +52,7 @@ class DropDown extends React.Component {
             name={iconName || 'minimal-down2x'}
             family={iconFamily || 'NowExtra'}
             size={iconSize || 10}
-            color={iconColor || nowTheme.COLORS.WHITE}
+            color={iconColor || appTheme.COLORS.WHITE}
           />
         </Block>
       </ModalDropdown>
@@ -72,7 +72,7 @@ DropDown.propTypes = {
 const styles = StyleSheet.create({
   qty: {
     width: 100,
-    backgroundColor: nowTheme.COLORS.DEFAULT,
+    backgroundColor: appTheme.COLORS.DEFAULT,
     paddingHorizontal: 16,
     paddingTop: 10,
     paddingBottom: 9.5,
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1
   },
   text: {
-    color: nowTheme.COLORS.WHITE,
+    color: appTheme.COLORS.WHITE,
     fontWeight: '600'
   },
   dropdown: {

@@ -1,7 +1,7 @@
 import { Animated, Dimensions, Easing } from 'react-native';
 // header for screens
 import { Header, Icon } from '../components';
-import { nowTheme, tabs } from '../constants';
+import { appTheme, tabs } from '../constants';
 
 import { Block } from 'galio-framework';
 // drawer
@@ -111,16 +111,6 @@ function ProfileStack(props) {
           headerTransparent: true,
         }}
       />
-      <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header title="" back white transparent navigation={navigation} scene={scene} />
-          ),
-          headerTransparent: true,
-        }}
-      />
     </Stack.Navigator>
   );
 }
@@ -143,16 +133,6 @@ function HomeStack(props) {
           cardStyle: { backgroundColor: '#FFFFFF' },
         }}
       />
-      <Stack.Screen
-        name="Pro"
-        component={Pro}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header title="" back white transparent navigation={navigation} scene={scene} />
-          ),
-          headerTransparent: true,
-        }}
-      />
     </Stack.Navigator>
   );
 }
@@ -163,12 +143,12 @@ function AppStack(props) {
       style={{ flex: 1 }}
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       drawerStyle={{
-        backgroundColor: nowTheme.COLORS.PRIMARY,
+        backgroundColor: appTheme.COLORS.PRIMARY,
         width: width * 0.8,
       }}
       drawerContentOptions={{
-        activeTintcolor: nowTheme.COLORS.WHITE,
-        inactiveTintColor: nowTheme.COLORS.WHITE,
+        activeTintcolor: appTheme.COLORS.WHITE,
+        inactiveTintColor: appTheme.COLORS.WHITE,
         activeBackgroundColor: 'transparent',
         itemStyle: {
           width: width * 0.75,

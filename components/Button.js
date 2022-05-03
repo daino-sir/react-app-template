@@ -3,20 +3,20 @@ import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { Button } from 'galio-framework';
 
-import nowTheme from '../constants/Theme';
+import appTheme from '../constants/Theme';
 
 class ArButton extends React.Component {
   render() {
     const { small, shadowless, children, color, style, fontSize, round, ...props } = this.props;
 
-    const colorStyle = color && nowTheme.COLORS[color.toUpperCase()];
+    const colorStyle = color && appTheme.COLORS[color.toUpperCase()];
 
     const buttonStyles = [
       small && styles.smallButton,
       colorStyle === 'neutral'
         ? { backgroundColor: 'rgba(0,0,0,0)' }
         : color && { backgroundColor: colorStyle },
-      round && { borderRadius: nowTheme.SIZES.BASE * 2 },
+      round && { borderRadius: appTheme.SIZES.BASE * 2 },
       !shadowless && styles.shadow,
       { ...style }
     ];

@@ -1,24 +1,24 @@
 import React from "react";
 import { Switch, Platform } from "react-native";
 
-import nowTheme from "../constants/Theme";
+import appTheme from "../constants/Theme";
 
 class MkSwitch extends React.Component {
   render() {
     const { value, ...props } = this.props;
     const thumbColor =
       Platform.OS === "ios"
-        ? nowTheme.COLORS.PRIMARY
+        ? appTheme.COLORS.PRIMARY
         : Platform.OS === "android" && value
-        ? nowTheme.COLORS.SWITCH_ON
-        : nowTheme.COLORS.SWITCH_OFF;
+        ? appTheme.COLORS.SWITCH_ON
+        : appTheme.COLORS.SWITCH_OFF;
 
     return (
       <Switch
         value={value}
         thumbColor={[
           value === true
-            ? nowTheme.COLORS.SWITCH_ON
+            ? appTheme.COLORS.SWITCH_ON
             :'#ffffff'
         ]}
         ios_backgroundColor={"#D8D8D8"}

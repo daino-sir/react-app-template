@@ -7,7 +7,7 @@ import { Block, GalioProvider } from 'galio-framework';
 import { NavigationContainer } from '@react-navigation/native';
 
 import Screens from './navigation/Screens';
-import { Images, articles, nowTheme } from './constants';
+import { Images, articles, appTheme } from './constants';
 
 // cache app images
 const assetImages = [
@@ -64,7 +64,7 @@ export default class App extends React.Component {
     } else {
       return (
         <NavigationContainer>
-          <GalioProvider theme={nowTheme}>
+          <GalioProvider theme={appTheme}>
             <Block flex>
               <Screens />
             </Block>

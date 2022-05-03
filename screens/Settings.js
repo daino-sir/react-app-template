@@ -8,7 +8,7 @@ import {
 import { Block, Text, theme, Icon } from "galio-framework";
 import { Switch } from "../components";
 
-import nowTheme from "../constants/Theme";
+import appTheme from "../constants/Theme";
 
 export default class Settings extends React.Component {
   state = {};
@@ -79,20 +79,20 @@ export default class Settings extends React.Component {
           renderItem={this.renderItem}
           ListHeaderComponent={
             <Block center style={styles.title}>
-              <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={appTheme.COLORS.TEXT}>
                 Recommended Settings
               </Text>
-              <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+              <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={appTheme.COLORS.CAPTION} color={appTheme.COLORS.TEXT}>
                 These are the most important settings
               </Text>
             </Block>
           }
         />
         <Block center style={styles.title}>
-          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={appTheme.COLORS.TEXT}>
             Payment Settings
           </Text>
-          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={appTheme.COLORS.CAPTION} color={appTheme.COLORS.TEXT}>
             These are also important settings
           </Text>
         </Block>
@@ -104,10 +104,10 @@ export default class Settings extends React.Component {
         />
 
         <Block center style={styles.title}>
-          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-bold', paddingBottom: 5 }} size={theme.SIZES.BASE} color={appTheme.COLORS.TEXT}>
             Privacy Settings
           </Text>
-          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={nowTheme.COLORS.CAPTION} color={nowTheme.COLORS.TEXT}>
+          <Text style={{ fontFamily: 'montserrat-regular' }} size={12} color={appTheme.COLORS.CAPTION} color={appTheme.COLORS.TEXT}>
             Third most important settings
           </Text>
         </Block>

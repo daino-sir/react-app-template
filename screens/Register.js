@@ -10,7 +10,7 @@ import {
 import { Block, Checkbox, Text, Button as GaButton, theme } from 'galio-framework';
 
 import { Button, Icon, Input } from '../components';
-import { Images, nowTheme } from '../constants';
+import { Images, appTheme } from '../constants';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -54,7 +54,7 @@ class Register extends React.Component {
                         iconFamily="Font-Awesome"
                         iconColor={theme.COLORS.WHITE}
                         iconSize={theme.SIZES.BASE * 1.625}
-                        color={nowTheme.COLORS.TWITTER}
+                        color={appTheme.COLORS.TWITTER}
                         style={[styles.social, styles.shadow]}
                       />
 
@@ -66,7 +66,7 @@ class Register extends React.Component {
                         iconFamily="Font-Awesome"
                         iconColor={theme.COLORS.WHITE}
                         iconSize={theme.SIZES.BASE * 1.625}
-                        color={nowTheme.COLORS.DRIBBBLE}
+                        color={appTheme.COLORS.DRIBBBLE}
                         style={[styles.social, styles.shadow]}
                       />
                       <GaButton
@@ -77,7 +77,7 @@ class Register extends React.Component {
                         iconFamily="Font-Awesome"
                         iconColor={theme.COLORS.WHITE}
                         iconSize={theme.SIZES.BASE * 1.625}
-                        color={nowTheme.COLORS.FACEBOOK}
+                        color={appTheme.COLORS.FACEBOOK}
                         style={[styles.social, styles.shadow]}
                       />
                     </Block>
@@ -154,9 +154,9 @@ class Register extends React.Component {
                                 borderRadius: 2,
                                 borderColor: '#E3E3E3'
                               }}
-                              color={nowTheme.COLORS.PRIMARY}
+                              color={appTheme.COLORS.PRIMARY}
                               labelStyle={{
-                                color: nowTheme.COLORS.HEADER,
+                                color: appTheme.COLORS.HEADER,
                                 fontFamily: 'montserrat-regular'
                               }}
                               label="I agree to the terms and conditions."
@@ -168,7 +168,7 @@ class Register extends React.Component {
                             <Text
                               style={{ fontFamily: 'montserrat-bold' }}
                               size={14}
-                              color={nowTheme.COLORS.WHITE}
+                              color={appTheme.COLORS.WHITE}
                             >
                               Get Started
                             </Text>
@@ -202,9 +202,9 @@ const styles = StyleSheet.create({
     marginTop: 55,
     width: width * 0.9,
     height: height < 812 ? height * 0.8 : height * 0.8,
-    backgroundColor: nowTheme.COLORS.WHITE,
+    backgroundColor: appTheme.COLORS.WHITE,
     borderRadius: 4,
-    shadowColor: nowTheme.COLORS.BLACK,
+    shadowColor: appTheme.COLORS.BLACK,
     shadowOffset: {
       width: 0,
       height: 4
@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden'
   },
   socialConnect: {
-    backgroundColor: nowTheme.COLORS.WHITE
+    backgroundColor: appTheme.COLORS.WHITE
     // borderBottomWidth: StyleSheet.hairlineWidth,
     // borderColor: "rgba(136, 152, 170, 0.3)"
   },
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
     width: 120,
     height: 40,
     backgroundColor: '#fff',
-    shadowColor: nowTheme.COLORS.BLACK,
+    shadowColor: appTheme.COLORS.BLACK,
     shadowOffset: {
       width: 0,
       height: 4
@@ -233,13 +233,13 @@ const styles = StyleSheet.create({
     elevation: 1
   },
   socialTextButtons: {
-    color: nowTheme.COLORS.PRIMARY,
+    color: appTheme.COLORS.PRIMARY,
     fontWeight: '800',
     fontSize: 14
   },
   inputIcons: {
     marginRight: 12,
-    color: nowTheme.COLORS.ICON_INPUT
+    color: appTheme.COLORS.ICON_INPUT
   },
   inputs: {
     borderWidth: 1,

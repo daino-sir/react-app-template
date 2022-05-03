@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions, ScrollView, Image, ImageBackground, Platform } 
 import { Block, Text, theme, Button as GaButton } from 'galio-framework';
 
 import { Button } from '../components';
-import { Images, nowTheme } from '../constants';
+import { Images, appTheme } from '../constants';
 import { HeaderHeight } from '../constants/utils';
 
 const { width, height } = Dimensions.get('screen');
@@ -120,8 +120,8 @@ const Profile = () => {
                 shadowless
                 icon="twitter"
                 iconFamily="Font-Awesome"
-                iconColor={nowTheme.COLORS.WHITE}
-                iconSize={nowTheme.SIZES.BASE * 1.375}
+                iconColor={appTheme.COLORS.WHITE}
+                iconSize={appTheme.SIZES.BASE * 1.375}
                 color={'#888888'}
                 style={[styles.social, styles.shadow]}
               />
@@ -131,8 +131,8 @@ const Profile = () => {
                 shadowless
                 icon="pinterest"
                 iconFamily="Font-Awesome"
-                iconColor={nowTheme.COLORS.WHITE}
-                iconSize={nowTheme.SIZES.BASE * 1.375}
+                iconColor={appTheme.COLORS.WHITE}
+                iconSize={appTheme.SIZES.BASE * 1.375}
                 color={'#888888'}
                 style={[styles.social, styles.shadow]}
               />
@@ -183,7 +183,7 @@ const Profile = () => {
               <Button
                 small
                 color="transparent"
-                textStyle={{ color: nowTheme.COLORS.PRIMARY, fontSize: 14 }}
+                textStyle={{ color: appTheme.COLORS.PRIMARY, fontSize: 14 }}
               >
                 View all
                   </Button>
@@ -253,9 +253,9 @@ const styles = StyleSheet.create({
     height: thumbMeasure
   },
   social: {
-    width: nowTheme.SIZES.BASE * 3,
-    height: nowTheme.SIZES.BASE * 3,
-    borderRadius: nowTheme.SIZES.BASE * 1.5,
+    width: appTheme.SIZES.BASE * 3,
+    height: appTheme.SIZES.BASE * 3,
+    borderRadius: appTheme.SIZES.BASE * 1.5,
     justifyContent: 'center',
     zIndex: 99,
     marginHorizontal: 5

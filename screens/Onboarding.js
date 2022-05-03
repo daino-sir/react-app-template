@@ -1,9 +1,11 @@
 import React from 'react';
-import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform , View} from 'react-native';
-import { Button, Text, theme } from 'galio-framework';
+import { Button, Text, ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform , View, Pressable} from 'react-native';
+import { theme } from 'galio-framework';
+import { AntDesign } from '@expo/vector-icons';
+
 
 const { height, width } = Dimensions.get('screen');
-import { Images, nowTheme } from '../constants/';
+import { Images, appTheme } from '../constants/';
 import { HeaderHeight } from '../constants/utils';
 
 export default class Onboarding extends React.Component {
@@ -13,45 +15,47 @@ export default class Onboarding extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <View>
-          <ImageBackground
-            source={Images.Onboarding}
-            style={{ flex: 1, height: height, width, zIndex: 1 }}
-          />
-          <View style={styles.padded}>
-            <View>
-              <View>
-                <Image source={Images.NowLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
-              </View>
-              <View>
-
-              </View>
-              <View middle row style={{ marginTop: 15, marginBottom: 30}}>
-              </View>
-
-              <View
-                style={{
-                  marginTop: theme.SIZES.BASE * 2.5,
-                  marginBottom: theme.SIZES.BASE * 2
+          <ImageBackground source={Images.Onboarding}
+          style={styles.image}>
+          <View
+          style={{
+                marginTop: 150,
+                justifyContent: 'center',
+                alignItems:'center',
+                alignSelf:'center' ,
+                height: 200,
+                width: 200
                 }}
-              >
-                <Button
-                  shadowless
-                  style={styles.button}
-                  color={nowTheme.COLORS.PRIMARY}
-                  onPress={() => navigation.navigate('App')}
-                >
-                  <Text
-                    style={{ fontFamily: 'montserrat-bold', fontSize: 14}}
-                    color={theme.COLORS.WHITE}
-                  >
-                    Get Started
-                  </Text>
-                </Button>
-              </View>
-            </View>
+          >
+          <Image
+            source={Images.Logo}
+            resizeMode="cover"
+            style={styles.logo}
+            />
           </View>
-        </View>
+          <View
+          style={{
+          flexDirection: 'column-reverse',
+          height:'40%'
+          }}
+          >
+          <Pressable
+          onPress={() => navigation.navigate('App')}
+          style={styles.button}
+          >
+          <Text
+          style={styles.text}
+          >
+          Get Started
+          </Text>
+          <View
+          style={{height: '100%', width: '16%',alignItems:'flex-end', flexDirection: 'column', justifyContent: 'center'}}
+          >
+          <AntDesign name="arrowright" size={18} color="#F8F8F8"style={{}} />
+          </View>
+          </Pressable>
+          </View>
+          </ImageBackground>
       </View>
     );
   }
@@ -59,23 +63,40 @@ export default class Onboarding extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: theme.COLORS.BLACK,
-    marginTop: Platform.OS === 'android' ? -HeaderHeight : 0
+    flex: 1,
+    backgroundColor: '#000000c0',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  padded: {
-    paddingHorizontal: theme.SIZES.BASE * 2,
-    zIndex: 3,
-    position: 'absolute',
-    bottom: Platform.OS === 'android' ? theme.SIZES.BASE * 2 : theme.SIZES.BASE * 3
+  logo:{
+  alignSelf:'center',
+  width: '100%',
+  height: '100%'
   },
+  text: {
+      color: '#F8F8F8',
+      fontSize: 15,
+      lineHeight: 84,
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
   button: {
-    width: width - theme.SIZES.BASE * 4,
-    height: theme.SIZES.BASE * 3,
-    shadowRadius: 0,
-    shadowOpacity: 0,
-    borderRadius: 50
+    flexDirection: 'row',
+    width: 150,
+    height: 40,
+    backgroundColor: '#336DFF',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    alignItems: 'center'
   },
-
+ image: {
+    flex: 1,
+    justifyContent: 'center',
+    alignSelf:'center',
+    height: 700,
+    width: 410
+  },
   gradient: {
     zIndex: 1,
     position: 'absolute',

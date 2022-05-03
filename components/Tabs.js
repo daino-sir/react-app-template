@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions, FlatList, Animated } from 'react-native';
 import { Block, theme } from 'galio-framework';
 
 const { width } = Dimensions.get('screen');
-import nowTheme from '../constants/Theme';
+import appTheme from '../constants/Theme';
 
 const defaultMenu = [
   { id: 'music', title: 'Music', },
@@ -65,13 +65,13 @@ export default class Tabs extends React.Component {
 
     const textColor = this.animatedValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [nowTheme.COLORS.TEXT, isActive ? nowTheme.COLORS.WHITE : nowTheme.COLORS.SECONDARY],
+      outputRange: [appTheme.COLORS.TEXT, isActive ? appTheme.COLORS.WHITE : appTheme.COLORS.SECONDARY],
       extrapolate: 'clamp',
     });
 
     const containerStyles = [
       styles.titleContainer,
-      !isActive && { backgroundColor: nowTheme.COLORS.TABS },
+      !isActive && { backgroundColor: appTheme.COLORS.TABS },
       isActive && styles.containerShadow
     ];
 
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     alignItems: 'center',
-    backgroundColor: nowTheme.COLORS.ACTIVE,
+    backgroundColor: appTheme.COLORS.ACTIVE,
     borderRadius: 21,
     marginRight: 9,
     paddingHorizontal: 10,
@@ -156,6 +156,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     paddingVertical: 8,
     paddingHorizontal: 12,
-    color: nowTheme.COLORS.MUTED
+    color: appTheme.COLORS.MUTED
   },
 });
