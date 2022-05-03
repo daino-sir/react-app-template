@@ -23,19 +23,6 @@ export default class Onboarding extends React.Component {
               <Block middle>
                 <Image source={Images.NowLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
               </Block>
-              <Block>
-                <Block middle>
-                  <Text
-                    style={{
-                      fontFamily: 'montserrat-regular', bottom: 50, position: 'absolute', letterSpacing: 2, paddingHorizontal: 20, textAlign: 'center'
-                    }}
-                    color="white"
-                    size={44}
-                  >
-                    Presta Sign
-                  </Text>
-                </Block>
-              </Block>
               <Block middle row>
 
               </Block>
