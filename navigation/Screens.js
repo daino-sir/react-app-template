@@ -147,7 +147,7 @@ function AppStack(props) {
         width: width * 0.8,
       }}
       drawerContentOptions={{
-        activeTintcolor: appTheme.COLORS.WHITE,
+        activeTintcolor: appTheme.COLORS.PRIMARY,
         inactiveTintColor: appTheme.COLORS.WHITE,
         activeBackgroundColor: 'transparent',
         itemStyle: {
@@ -168,7 +168,7 @@ function AppStack(props) {
       }}
       initialRouteName="Home"
     >
-      <Drawer.Screen name="Home" component={HomeStack} />
+      <Drawer.Screen name="Home" component={HomeStack} options={{headerTransparent: true, headerShown: false}}/>
       <Drawer.Screen name="Components" component={ComponentsStack} />
       <Drawer.Screen name="Articles" component={ArticlesStack} />
       <Drawer.Screen name="Profile" component={ProfileStack} />

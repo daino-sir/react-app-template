@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform , View, Pressable} from 'react-native';
+import {SafeAreaView, Button, Text, ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform , View, Pressable} from 'react-native';
 import { theme } from 'galio-framework';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -13,7 +13,7 @@ export default class Onboarding extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
           <ImageBackground source={Images.Onboarding}
           style={styles.image}>
@@ -56,7 +56,7 @@ export default class Onboarding extends React.Component {
           </Pressable>
           </View>
           </ImageBackground>
-      </View>
+      </SafeAreaView>
     );
   }
 }
