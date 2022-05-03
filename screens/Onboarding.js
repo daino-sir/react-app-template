@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform } from 'react-native';
-import { Block, Button, Text, theme } from 'galio-framework';
+import { ImageBackground, Image, StyleSheet, StatusBar, Dimensions, Platform , View} from 'react-native';
+import { Button, Text, theme } from 'galio-framework';
 
 const { height, width } = Dimensions.get('screen');
 import { Images, nowTheme } from '../constants/';
@@ -11,26 +11,25 @@ export default class Onboarding extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <Block flex style={styles.container}>
+      <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <Block flex>
+        <View>
           <ImageBackground
             source={Images.Onboarding}
             style={{ flex: 1, height: height, width, zIndex: 1 }}
           />
-          <Block space="between" style={styles.padded}>
-            <Block>
-              <Block middle>
+          <View style={styles.padded}>
+            <View>
+              <View>
                 <Image source={Images.NowLogo} style={{ width: 115, height: 124, bottom: 200, position: 'absolute' }} />
-              </Block>
-              <Block middle row>
+              </View>
+              <View>
 
-              </Block>
-              <Block middle row style={{ marginTop: 15, marginBottom: 30}}>
-              </Block>
+              </View>
+              <View middle row style={{ marginTop: 15, marginBottom: 30}}>
+              </View>
 
-              <Block
-                row
+              <View
                 style={{
                   marginTop: theme.SIZES.BASE * 2.5,
                   marginBottom: theme.SIZES.BASE * 2
@@ -49,11 +48,11 @@ export default class Onboarding extends React.Component {
                     Get Started
                   </Text>
                 </Button>
-              </Block>
-            </Block>
-          </Block>
-        </Block>
-      </Block>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
     );
   }
 }
