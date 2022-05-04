@@ -21,6 +21,8 @@ const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
+
+
 class Landing extends React.Component {
   render() {
     return (
@@ -47,7 +49,7 @@ class Landing extends React.Component {
         <View style={{ justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 150, width: 180 }}>
         <TextInput style={styles.input}/>
         </View>
-        <View style={{ flexDirection: 'column-reverse', paddingBottom: 10 }}>
+        <View style={{ flexDirection: 'column-reverse' }}>
                 <Pressable
                           onPress={() => navigation.navigate('App')}
                           style={styles.button}
