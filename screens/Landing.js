@@ -21,7 +21,7 @@ const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
-class Register extends React.Component {
+class Landing extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -44,7 +44,7 @@ class Register extends React.Component {
         <Text style={styles.heading}>Enter registered Phone number</Text>
         <Text style={styles.text}>We will send you a One Time Pin. use it to verify your phone number</Text>
         </View>
-        <View style={{ justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 180, width: 180 }}>
+        <View style={{ justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 150, width: 180 }}>
         <TextInput style={styles.input}/>
         </View>
         <View style={{ flexDirection: 'column-reverse', paddingBottom: 10 }}>
@@ -110,4 +110,4 @@ button: {
     },
 });
 
-export default Register;
+export default Landing;

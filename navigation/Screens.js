@@ -11,7 +11,7 @@ import Home from '../screens/Home';
 import Onboarding from '../screens/Onboarding';
 import Profile from '../screens/Profile';
 import React from 'react';
-import Register from '../screens/Register';
+import Landing from '../screens/Landing';
 import SettingsScreen from '../screens/Settings';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -75,7 +75,7 @@ function AccountStack(props) {
     >
       <Stack.Screen
         name="Account"
-        component={Register}
+        component={Landing}
         options={{
           headerShown: false,
           headerTransparent: true,
