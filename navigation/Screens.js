@@ -72,18 +72,12 @@ function AccountStack(props) {
   return (
     <Stack.Navigator
       initialRouteName="Account"
-      screenOptions={{
-        mode: 'card',
-        headerShown: 'screen',
-      }}
     >
       <Stack.Screen
         name="Account"
         component={Register}
         options={{
-          header: ({ navigation, scene }) => (
-            <Header transparent title="Create Account" navigation={navigation} scene={scene} />
-          ),
+          headerShown: false,
           headerTransparent: true,
         }}
       />
@@ -192,7 +186,7 @@ export default function OnboardingStack(props) {
           headerTransparent: true,
         }}
       />
-      <Stack.Screen name="App" component={AppStack} />
+      <Stack.Screen name="App" component={AccountStack} />
     </Stack.Navigator>
   );
 }

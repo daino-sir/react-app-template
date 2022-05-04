@@ -1,18 +1,21 @@
 import React from 'react';
 import {
+  View,
+  Text,
+  Image,
   StyleSheet,
   ImageBackground,
   Dimensions,
   StatusBar,
   TouchableWithoutFeedback,
-  Keyboard
+  Keyboard,
+  TextInput,
+  ScrollView,
+  Pressable
 } from 'react-native';
-import { Block, Checkbox, Text, Button as GaButton, theme } from 'galio-framework';
 
 import { Button, Icon, Input } from '../components';
 import { Images, appTheme } from '../constants';
-
-const { width, height } = Dimensions.get('screen');
 
 const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
@@ -21,248 +24,90 @@ const DismissKeyboard = ({ children }) => (
 class Register extends React.Component {
   render() {
     return (
-      <DismissKeyboard>
-        <Block flex middle>
-          <ImageBackground
-            source={Images.RegisterBackground}
-            style={styles.imageBackgroundContainer}
-            imageStyle={styles.imageBackground}
-          >
-            <Block flex middle>
-              <Block style={styles.registerContainer}>
-                <Block flex space="evenly">
-                  <Block flex={0.4} middle style={styles.socialConnect}>
-                    <Block flex={0.5} middle>
-                      <Text
-                        style={{
-                          fontFamily: 'montserrat-regular',
-                          textAlign: 'center'
-                        }}
-                        color="#333"
-                        size={24}
-                      >
-                        Register
-                      </Text>
-                    </Block>
-
-                    <Block flex={0.5} row middle space="between" style={{ marginBottom: 18 }}>
-                      <GaButton
-                        round
-                        onlyIcon
-                        shadowless
-                        icon="twitter"
-                        iconFamily="Font-Awesome"
-                        iconColor={theme.COLORS.WHITE}
-                        iconSize={theme.SIZES.BASE * 1.625}
-                        color={appTheme.COLORS.TWITTER}
-                        style={[styles.social, styles.shadow]}
-                      />
-
-                      <GaButton
-                        round
-                        onlyIcon
-                        shadowless
-                        icon="dribbble"
-                        iconFamily="Font-Awesome"
-                        iconColor={theme.COLORS.WHITE}
-                        iconSize={theme.SIZES.BASE * 1.625}
-                        color={appTheme.COLORS.DRIBBBLE}
-                        style={[styles.social, styles.shadow]}
-                      />
-                      <GaButton
-                        round
-                        onlyIcon
-                        shadowless
-                        icon="facebook"
-                        iconFamily="Font-Awesome"
-                        iconColor={theme.COLORS.WHITE}
-                        iconSize={theme.SIZES.BASE * 1.625}
-                        color={appTheme.COLORS.FACEBOOK}
-                        style={[styles.social, styles.shadow]}
-                      />
-                    </Block>
-                  </Block>
-                  <Block flex={0.1} middle>
-                    <Text
-                      style={{
-                        fontFamily: 'montserrat-regular',
-                        textAlign: 'center'
-                      }}
-                      muted
-                      size={16}
-                    >
-                      or be classical
-                    </Text>
-                  </Block>
-                  <Block flex={1} middle space="between">
-                    <Block center flex={0.9}>
-                      <Block flex space="between">
-                        <Block>
-                          <Block width={width * 0.8} style={{ marginBottom: 5 }}>
-                            <Input
-                              placeholder="First Name"
-                              style={styles.inputs}
-                              iconContent={
-                                <Icon
-                                  size={16}
-                                  color="#ADB5BD"
-                                  name="profile-circle"
-                                  family="NowExtra"
-                                  style={styles.inputIcons}
-                                />
-                              }
-                            />
-                          </Block>
-                          <Block width={width * 0.8} style={{ marginBottom: 5 }}>
-                            <Input
-                              placeholder="Last Name"
-                              style={styles.inputs}
-                              iconContent={
-                                <Icon
-                                  size={16}
-                                  color="#ADB5BD"
-                                  name="caps-small2x"
-                                  family="NowExtra"
-                                  style={styles.inputIcons}
-                                />
-                              }
-                            />
-                          </Block>
-                          <Block width={width * 0.8}>
-                            <Input
-                              placeholder="Email"
-                              style={styles.inputs}
-                              iconContent={
-                                <Icon
-                                  size={16}
-                                  color="#ADB5BD"
-                                  name="email-852x"
-                                  family="NowExtra"
-                                  style={styles.inputIcons}
-                                />
-                              }
-                            />
-                          </Block>
-                          <Block
-                            style={{ marginVertical: theme.SIZES.BASE, marginLeft: 15}}
-                            row
-                            width={width * 0.75}
+      <View style={styles.container}>
+      <ScrollView style={{width: '100%'}}>
+       <View style={{ justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 70, width: 70 }}>
+       <Image
+        source={Images.Logo}
+        resizeMode="cover"
+        style={styles.logo}
+        />
+        </View>
+        <View style={{ marginTop: 40, justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 150, width: 150 }}>
+       <Image
+               source={Images.RegIllustration}
+               resizeMode="cover"
+               style={styles.logo}
+               />
+        </View>
+        <View style={{ justifyContent: 'space-evenly', alignItems:'center', alignSelf:'center', height: 180, width: 350 }}>
+        <Text style={styles.heading}>Enter registered Phone number</Text>
+        <Text style={styles.text}>We will send you a One Time Pin. use it to verify your phone number</Text>
+        </View>
+        <View style={{ justifyContent: 'center', alignItems:'center', alignSelf:'center', height: 180, width: 180 }}>
+        <TextInput style={styles.input}/>
+        </View>
+        <View style={{ flexDirection: 'column-reverse', paddingBottom: 10 }}>
+                <Pressable
+                          onPress={() => navigation.navigate('App')}
+                          style={styles.button}
                           >
-                            <Checkbox
-                              checkboxStyle={{
-                                borderWidth: 1,
-                                borderRadius: 2,
-                                borderColor: '#E3E3E3'
-                              }}
-                              color={appTheme.COLORS.PRIMARY}
-                              labelStyle={{
-                                color: appTheme.COLORS.HEADER,
-                                fontFamily: 'montserrat-regular'
-                              }}
-                              label="I agree to the terms and conditions."
-                            />
-                          </Block>
-                        </Block>
-                        <Block center>
-                          <Button color="primary" round style={styles.createButton}>
-                            <Text
-                              style={{ fontFamily: 'montserrat-bold' }}
-                              size={14}
-                              color={appTheme.COLORS.WHITE}
-                            >
-                              Get Started
-                            </Text>
-                          </Button>
-                        </Block>
-                      </Block>
-                    </Block>
-                  </Block>
-                </Block>
-              </Block>
-            </Block>
-          </ImageBackground>
-        </Block>
-      </DismissKeyboard>
+                          <Text
+                          style={styles.buttonText}
+                          >
+                          Get OTP
+                          </Text>
+                          </Pressable>
+                </View>
+        </ScrollView>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  imageBackgroundContainer: {
-    width: width,
-    height: height,
-    padding: 0,
-    zIndex: 1
-  },
-  imageBackground: {
-    width: width,
-    height: height
-  },
-  registerContainer: {
-    marginTop: 55,
-    width: width * 0.9,
-    height: height < 812 ? height * 0.8 : height * 0.8,
-    backgroundColor: appTheme.COLORS.WHITE,
-    borderRadius: 4,
-    shadowColor: appTheme.COLORS.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 8,
-    shadowOpacity: 0.1,
-    elevation: 1,
-    overflow: 'hidden'
-  },
-  socialConnect: {
-    backgroundColor: appTheme.COLORS.WHITE
-    // borderBottomWidth: StyleSheet.hairlineWidth,
-    // borderColor: "rgba(136, 152, 170, 0.3)"
-  },
-  socialButtons: {
-    width: 120,
+button: {
+    width: 150,
     height: 40,
-    backgroundColor: '#fff',
-    shadowColor: appTheme.COLORS.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 4
-    },
-    shadowRadius: 8,
-    shadowOpacity: 0.1,
-    elevation: 1
-  },
-  socialTextButtons: {
-    color: appTheme.COLORS.PRIMARY,
-    fontWeight: '800',
-    fontSize: 14
-  },
-  inputIcons: {
-    marginRight: 12,
-    color: appTheme.COLORS.ICON_INPUT
-  },
-  inputs: {
-    borderWidth: 1,
-    borderColor: '#E3E3E3',
-    borderRadius: 21.5
-  },
-  passwordCheck: {
-    paddingLeft: 2,
-    paddingTop: 6,
-    paddingBottom: 15
-  },
-  createButton: {
-    width: width * 0.5,
-    marginTop: 25,
-    marginBottom: 40
-  },
-  social: {
-    width: theme.SIZES.BASE * 3.5,
-    height: theme.SIZES.BASE * 3.5,
-    borderRadius: theme.SIZES.BASE * 1.75,
+    backgroundColor: '#336DFF',
+    borderRadius: 50,
     justifyContent: 'center',
-    marginHorizontal: 10
-  }
+    alignSelf: 'center',
+    alignItems: 'center'
+  },
+  heading:{
+    color:'#323492',
+     textAlign: 'center',
+     fontSize: 20
+  },
+  text:{
+     textAlign: 'center',
+     color:'#ADADAD'
+  },
+  buttonText:{
+    color: '#F8F8F8',
+    fontSize: 15,
+    lineHeight: 84,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  container:{
+     flex: 1,
+     flexDirection: 'column',
+     alignItems: 'center'
+  },
+  input:{
+     width: 280,
+     borderColor: '#ADADAD',
+     height: 70,
+     borderWidth: 2,
+     borderRadius: 25
+  },
+  logo:{
+    alignSelf:'center',
+    width: '100%',
+    height: '100%'
+    },
 });
 
 export default Register;
